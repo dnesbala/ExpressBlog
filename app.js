@@ -5,11 +5,12 @@ const blogRoutes = require("./routes/blogRoutes");
 
 const app = express();
 
+const PORT = process.env.PORT || 3000;
 const dbURI =
   "mongodb+srv://test:test1234@cluster0-uowvc.mongodb.net/node-ninja?retryWrites=true&w=majority";
 mongoose
   .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(app.listen(3000))
+  .then(app.listen(PORT))
   .catch((err) => console.log(err));
 
 app.set("view engine", "ejs");
