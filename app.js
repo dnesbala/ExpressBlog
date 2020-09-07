@@ -7,7 +7,7 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 const dbURI =
-  "mongodb+srv://test:test1234@cluster0-uowvc.mongodb.net/node-ninja?retryWrites=true&w=majority";
+  "YOUR_DB_URI";
 mongoose
   .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(app.listen(PORT))
